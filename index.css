@@ -1,0 +1,487 @@
+.catalog-button,
+.navigation-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    height: 52px;
+    padding: 0 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+/* Кнопка футболки */
+.catalog-button {
+    background: #111;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+.catalog-button:hover {
+    transform: translateY(-2px);
+    background: #222;
+}
+
+/* Кнопка назад */
+.navigation-button--back {
+    background: #fff;
+    color: #111;
+    border: 1px solid #dcdcdc;
+}
+
+.navigation-button--back:hover {
+    transform: translateY(-2px);
+    border-color: #111;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!! */
+.tee-size-section {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tee-size-card {
+    width: 1900px;
+    height: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.tee-size-card__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 54px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #1f1b18;
+    text-transform: uppercase;
+}
+
+.tee-size-section__visual {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tee-size-section__shirt-icon {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ===== TABLE (IDEAL CLEAN GRID) ===== */
+.size-card {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 24px;
+    background: linear-gradient(180deg, #f7f3ee 0%, #eee7de 100%);
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.size-card__title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.size-card__table {
+    border-collapse: separate;
+    border-spacing: 21px 17px;
+    table-layout: fixed;
+    /* ← КРИТИЧНО */
+    width: auto;
+    /* ← НЕ 100% */
+}
+
+/* ВСІ ЦИФРИ + ЗАГОЛОВКИ */
+.size-card__table th:not(:first-child),
+.size-card__table td:not(:first-child) {
+    width: 77px;
+    min-width: 107px;
+    max-width: 77px;
+    text-align: center;
+    padding: 0;
+}
+
+/* ПЕРША КОЛОНКА (назви) */
+.size-card__table td:first-child,
+.size-card__table th:first-child {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    text-align: left;
+    padding: 0;
+}
+
+.size-card__table th {
+    font-size: 17px;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+}
+
+.size-card__table td {
+    background: #fff;
+    padding: 12px;
+    text-align: center;
+    border-radius: 33px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    font-weight: 400;
+}
+
+.size-card__table td:first-child {
+    text-align: left;
+    padding: 10px 50px 10px 20px;
+    font-weight: 600;
+    color: #444;
+    background: #fff;
+}
+
+.size-card__table tr {
+    transition: 0.2s;
+}
+
+.size-card__table tr:hover td {
+    background: #d4d4d4;
+}
+
+.size-card__table tr td {
+    background: #fff;
+    font-weight: 600;
+    color: #444;
+}
+
+.size-card__table td {
+    background: #e6e6e6;
+    border-radius: 999px;
+    box-shadow: inset 3px 3px 2px rgb(180 178 178);
+}
+
+.text-add {
+    padding: 10px 50px 10px 27px;
+    font-weight: 600;
+    color: #444;
+    margin: 0;
+}
+
+.blur-bg {
+    font-weight: 600;
+    color: #444;
+}
+
+.blur-bgs {
+    font-weight: 600;
+    color: #444;
+}
+
+.tee-size-section__visual {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+th span {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+
+/* ===== АДАПТИВНІСТЬ ТІЛЬКИ ДЛЯ МОБІЛЬНИХ ===== */
+@media (max-width: 600px) {
+    .tee-size-section {
+        max-width: 100%;
+        margin: 30px auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .tee-size-card {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
+
+    .tee-size-card__title {
+        max-width: 100%;
+        font-size: 32px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .tee-size-section__visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .tee-size-section__shirt-icon {
+        max-width: 220px;
+    }
+
+    .size-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 12px;
+        box-sizing: border-box;
+        overflow-x: auto;
+    }
+
+    .size-card__table {
+        width: auto;
+        min-width: 850px;
+        border-spacing: 10px 14px;
+    }
+
+    .text-add {
+        padding: 10px 12px;
+        white-space: normal;
+        width: max-content;
+    }
+}
+
+@media (max-width: 380px) {
+    .tee-size-section {
+        padding: 0 6px;
+    }
+
+    .tee-size-card__title {
+        font-size: 27px;
+        letter-spacing: 1px;
+    }
+
+    .size-card {
+        padding: 8px;
+    }
+}
+
+
+
+
+/* ========================================
+   LEO GOLD — FIX PAGE LAYOUT
+   Таблицю та її значення не змінюємо
+======================================== */
+
+.tee-size-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 50px 24px;
+    box-sizing: border-box;
+}
+
+/* Вступ */
+.leo-gold-intro {
+    order: 1;
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto 55px;
+    padding: 42px 48px;
+    text-align: center;
+    background: #faf8f4;
+    border: 1px solid #e8dfd2;
+    box-sizing: border-box;
+}
+
+.leo-gold-intro__label {
+    margin: 0 0 18px;
+    color: #b88e55;
+    font: 600 11px/1.6 "Inter", sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.leo-gold-intro__title {
+    margin: 0 0 20px;
+    color: #26221e;
+    font: 500 clamp(34px, 4vw, 52px)/1.15 "Cormorant Garamond", Georgia, serif;
+}
+
+.leo-gold-intro__text {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #625d56;
+    font: 400 15px/1.9 "Inter", sans-serif;
+}
+
+.leo-gold-intro__note {
+    max-width: 700px;
+    margin: 22px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid #e5ddd1;
+    color: #8a765e;
+    font: 400 13px/1.8 "Inter", sans-serif;
+}
+
+/* Блок розмірної таблиці */
+.tee-size-card {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.tee-size-card__title {
+    margin: 0 0 32px;
+    text-align: center;
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.25;
+    letter-spacing: 2px;
+}
+
+.tee-size-section__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+/* Інструкція */
+.leo-gold-tips {
+    order: 3;
+    width: 100%;
+    max-width: 920px;
+    margin: 55px auto 0;
+    padding: 35px 42px;
+    background: #f7f5f1;
+    border: 1px solid #eee7dd;
+    box-sizing: border-box;
+}
+
+.leo-gold-tips__title {
+    margin: 0 0 22px;
+    color: #29251f;
+    font: 500 clamp(28px, 3vw, 36px)/1.2 "Cormorant Garamond", Georgia, serif;
+    text-align: center;
+}
+
+.leo-gold-tips__text {
+    max-width: 720px;
+    margin: 0 auto 14px;
+    color: #625d56;
+    font: 400 14px/1.9 "Inter", sans-serif;
+    text-align: center;
+}
+
+.leo-gold-tips__text:last-child {
+    margin-bottom: 0;
+}
+
+/* Футер */
+.leo-gold-footer {
+    order: 4;
+    width: 100%;
+    max-width: 920px;
+    margin: 35px auto 0;
+    padding: 30px 20px 10px;
+    text-align: center;
+    border-top: 1px solid #e8dfd2;
+    box-sizing: border-box;
+}
+
+.leo-gold-footer__brand {
+    margin: 0 0 10px;
+    font: 600 30px/1.3 "Cormorant Garamond", Georgia, serif;
+    letter-spacing: 6px;
+    color: #b88e55;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.leo-gold-footer__slogan {
+    margin: 0 0 10px;
+    color: #302b25;
+    font: 500 22px/1.5 "Cormorant Garamond", Georgia, serif;
+}
+
+.leo-gold-footer__text {
+    max-width: 500px;
+    margin: 0 auto;
+    color: #777067;
+    font: 400 13px/1.8 "Inter", sans-serif;
+}
+
+/* Мобільні пристрої */
+@media (max-width: 600px) {
+    .tee-size-section {
+        padding: 24px 12px;
+    }
+
+    .leo-gold-intro {
+        margin-bottom: 35px;
+        padding: 30px 20px;
+    }
+
+    .leo-gold-intro__title {
+        font-size: 35px;
+    }
+
+    .leo-gold-intro__text {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .leo-gold-intro__note {
+        font-size: 12px;
+    }
+
+    .tee-size-card__title {
+        margin-bottom: 24px;
+        font-size: 27px;
+        letter-spacing: 1px;
+    }
+
+    .leo-gold-tips {
+        margin-top: 35px;
+        padding: 26px 20px;
+    }
+
+    .leo-gold-tips__title {
+        font-size: 29px;
+    }
+
+    .leo-gold-tips__text {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .leo-gold-footer {
+        margin-top: 28px;
+        padding: 25px 12px 10px;
+    }
+}
